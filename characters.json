@@ -1,0 +1,494 @@
+[
+  {
+    "name": "Luke Skywalker",
+    "species": "Human",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "C-3PO",
+    "species": "Droid",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "R2-D2",
+    "species": "Droid",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Darth Vader",
+    "species": "Human",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "Leia Organa",
+    "species": "Human",
+    "world": "Alderaan",
+    "affiliation": []
+  },
+  {
+    "name": "Owen Lars",
+    "species": "Human",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "Beru Whitesun lars",
+    "species": "Human",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "R5-D4",
+    "species": "Droid",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "Biggs Darklighter",
+    "species": "Human",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "Obi-Wan Kenobi",
+    "species": "Human",
+    "world": "Stewjon",
+    "affiliation": []
+  },
+  {
+    "name": "Anakin Skywalker",
+    "species": "Human",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "Wilhuff Tarkin",
+    "species": "Human",
+    "world": "Eriadu",
+    "affiliation": []
+  },
+  {
+    "name": "Chewbacca",
+    "species": "Wookie",
+    "world": "Kashyyyk",
+    "affiliation": []
+  },
+  {
+    "name": "Han Solo",
+    "species": "Human",
+    "world": "Corellia",
+    "affiliation": []
+  },
+  {
+    "name": "Greedo",
+    "species": "Rodian",
+    "world": "Rodia",
+    "affiliation": []
+  },
+  {
+    "name": "Jabba Desilijic Tiure",
+    "species": "Hutt",
+    "world": "Nal Hutta",
+    "affiliation": []
+  },
+  {
+    "name": "Wedge Antilles",
+    "species": "Human",
+    "world": "Corellia",
+    "affiliation": []
+  },
+  {
+    "name": "Jek Tono Porkins",
+    "species": "Human",
+    "world": "Bestine IV",
+    "affiliation": []
+  },
+  {
+    "name": "Yoda",
+    "species": "Yoda's species",
+    "world": "unknown",
+    "affiliation": []
+  },
+  {
+    "name": "Palpatine",
+    "species": "Human",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Boba Fett",
+    "species": "Human",
+    "world": "Kamino",
+    "affiliation": []
+  },
+  {
+    "name": "IG-88",
+    "species": "Droid",
+    "world": "unknown",
+    "affiliation": []
+  },
+  {
+    "name": "Bossk",
+    "species": "Trandoshan",
+    "world": "Trandosha",
+    "affiliation": []
+  },
+  {
+    "name": "Lando Calrissian",
+    "species": "Human",
+    "world": "Socorro",
+    "affiliation": []
+  },
+  {
+    "name": "Lobot",
+    "species": "Human",
+    "world": "Bespin",
+    "affiliation": []
+  },
+  {
+    "name": "Ackbar",
+    "species": "Mon Calamari",
+    "world": "Mon Cala",
+    "affiliation": []
+  },
+  {
+    "name": "Mon Mothma",
+    "species": "Human",
+    "world": "Chandrila",
+    "affiliation": []
+  },
+  {
+    "name": "Arvel Crynyd",
+    "species": "Human",
+    "world": "unknown",
+    "affiliation": []
+  },
+  {
+    "name": "Wicket Systri Warrick",
+    "species": "Ewok",
+    "world": "Endor",
+    "affiliation": []
+  },
+  {
+    "name": "Nien Nunb",
+    "species": "Sullustan",
+    "world": "Sullust",
+    "affiliation": []
+  },
+  {
+    "name": "Qui-Gon Jinn",
+    "species": "Human",
+    "world": "unknown",
+    "affiliation": []
+  },
+  {
+    "name": "Nute Gunray",
+    "species": "Neimodian",
+    "world": "Cato Neimoidia",
+    "affiliation": []
+  },
+  {
+    "name": "Finis Valorum",
+    "species": "Human",
+    "world": "Coruscant",
+    "affiliation": []
+  },
+  {
+    "name": "Padmé Amidala",
+    "species": "Human",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Jar Jar Binks",
+    "species": "Gungan",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Roos Tarpals",
+    "species": "Gungan",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Rugor Nass",
+    "species": "Gungan",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Ric Olié",
+    "species": "Human",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Watto",
+    "species": "Toydarian",
+    "world": "Toydaria",
+    "affiliation": []
+  },
+  {
+    "name": "Sebulba",
+    "species": "Dug",
+    "world": "Malastare",
+    "affiliation": []
+  },
+  {
+    "name": "Quarsh Panaka",
+    "species": "Human",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Shmi Skywalker",
+    "species": "Human",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "Darth Maul",
+    "species": "Zabrak",
+    "world": "Dathomir",
+    "affiliation": []
+  },
+  {
+    "name": "Bib Fortuna",
+    "species": "Twi'lek",
+    "world": "Ryloth",
+    "affiliation": []
+  },
+  {
+    "name": "Ayla Secura",
+    "species": "Twi'lek",
+    "world": "Ryloth",
+    "affiliation": []
+  },
+  {
+    "name": "Ratts Tyerel",
+    "species": "Aleena",
+    "world": "Aleen Minor",
+    "affiliation": []
+  },
+  {
+    "name": "Dud Bolt",
+    "species": "Vulptereen",
+    "world": "Vulpter",
+    "affiliation": []
+  },
+  {
+    "name": "Gasgano",
+    "species": "Xexto",
+    "world": "Troiken",
+    "affiliation": []
+  },
+  {
+    "name": "Ben Quadinaros",
+    "species": "Toong",
+    "world": "Tund",
+    "affiliation": []
+  },
+  {
+    "name": "Mace Windu",
+    "species": "Human",
+    "world": "Haruun Kal",
+    "affiliation": []
+  },
+  {
+    "name": "Ki-Adi-Mundi",
+    "species": "Cerean",
+    "world": "Cerea",
+    "affiliation": []
+  },
+  {
+    "name": "Kit Fisto",
+    "species": "Nautolan",
+    "world": "Glee Anselm",
+    "affiliation": []
+  },
+  {
+    "name": "Eeth Koth",
+    "species": "Zabrak",
+    "world": "Iridonia",
+    "affiliation": []
+  },
+  {
+    "name": "Adi Gallia",
+    "species": "Tholothian",
+    "world": "Coruscant",
+    "affiliation": []
+  },
+  {
+    "name": "Saesee Tiin",
+    "species": "Iktotchi",
+    "world": "Iktotch",
+    "affiliation": []
+  },
+  {
+    "name": "Yarael Poof",
+    "species": "Quermian",
+    "world": "Quermia",
+    "affiliation": []
+  },
+  {
+    "name": "Plo Koon",
+    "species": "Kel Dor",
+    "world": "Dorin",
+    "affiliation": []
+  },
+  {
+    "name": "Mas Amedda",
+    "species": "Chagrian",
+    "world": "Champala",
+    "affiliation": []
+  },
+  {
+    "name": "Gregar Typho",
+    "species": "Human",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Cordé",
+    "species": "Human",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Cliegg Lars",
+    "species": "Human",
+    "world": "Tatooine",
+    "affiliation": []
+  },
+  {
+    "name": "Poggle the Lesser",
+    "species": "Geonosian",
+    "world": "Geonosis",
+    "affiliation": []
+  },
+  {
+    "name": "Luminara Unduli",
+    "species": "Mirialan",
+    "world": "Mirial",
+    "affiliation": []
+  },
+  {
+    "name": "Barriss Offee",
+    "species": "Mirialan",
+    "world": "Mirial",
+    "affiliation": []
+  },
+  {
+    "name": "Dormé",
+    "species": "Human",
+    "world": "Naboo",
+    "affiliation": []
+  },
+  {
+    "name": "Dooku",
+    "species": "Human",
+    "world": "Serenno",
+    "affiliation": []
+  },
+  {
+    "name": "Bail Prestor Organa",
+    "species": "Human",
+    "world": "Alderaan",
+    "affiliation": []
+  },
+  {
+    "name": "Jango Fett",
+    "species": "Human",
+    "world": "Concord Dawn",
+    "affiliation": []
+  },
+  {
+    "name": "Zam Wesell",
+    "species": "Clawdite",
+    "world": "Zolan",
+    "affiliation": []
+  },
+  {
+    "name": "Dexter Jettster",
+    "species": "Besalisk",
+    "world": "Ojom",
+    "affiliation": []
+  },
+  {
+    "name": "Lama Su",
+    "species": "Kaminoan",
+    "world": "Kamino",
+    "affiliation": []
+  },
+  {
+    "name": "Taun We",
+    "species": "Kaminoan",
+    "world": "Kamino",
+    "affiliation": []
+  },
+  {
+    "name": "Jocasta Nu",
+    "species": "Human",
+    "world": "Coruscant",
+    "affiliation": []
+  },
+  {
+    "name": "R4-P17",
+    "species": "Human",
+    "world": "unknown",
+    "affiliation": []
+  },
+  {
+    "name": "Wat Tambor",
+    "species": "Skakoan",
+    "world": "Skako",
+    "affiliation": []
+  },
+  {
+    "name": "San Hill",
+    "species": "Muun",
+    "world": "Muunilinst",
+    "affiliation": []
+  },
+  {
+    "name": "Shaak Ti",
+    "species": "Togruta",
+    "world": "Shili",
+    "affiliation": []
+  },
+  {
+    "name": "Grievous",
+    "species": "Kaleesh",
+    "world": "Kalee",
+    "affiliation": []
+  },
+  {
+    "name": "Tarfful",
+    "species": "Wookie",
+    "world": "Kashyyyk",
+    "affiliation": []
+  },
+  {
+    "name": "Raymus Antilles",
+    "species": "Human",
+    "world": "Alderaan",
+    "affiliation": []
+  },
+  {
+    "name": "Sly Moore",
+    "species": "Human",
+    "world": "Umbara",
+    "affiliation": []
+  },
+  {
+    "name": "Tion Medon",
+    "species": "Pau'an",
+    "world": "Utapau",
+    "affiliation": []
+  }
+]

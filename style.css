@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.game-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid-headers, .guess-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.grid-headers {
+    font-weight: bold;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+}
+
+.box {
+    padding: 15px 5px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+
+    transition: transform 0.25s ease-in-out;
+
+    .flip-half {
+        transform: rotateX(90deg);
+    }
+}
+
+.green { background-color: #2e7d32; }
+.yellow { background-color: #f9a825; color: #000; }
+.red { background-color: #c62828; } 

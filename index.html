@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarWarsdle</title>
+  
+  <!-- This links your CSS file to fix the bland styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game-wrapper">
+    <!-- Search UI -->
+    <div class="search-container">
+      <input type="text" id="guessInput" list="characterOptions" placeholder="Enter a character...">
+      <datalist id="characterOptions"></datalist>
+      <button id="guessButton">Guess</button>
+    </div>
+  
+    <!-- Grid Headers (Updated to 4 columns to match our new data) -->
+    <div class="grid-headers" style="grid-template-columns: repeat(4, 1fr);">
+      <div>Name</div>
+      <div>Species</div>
+      <div>World</div>
+      <div>Affiliation</div>
+    </div>
+  
+    <!-- The grid container -->
+    <div id="grid"></div>
+    
+    <!-- Win/Loss Message -->
+    <h2 id="gameMessage" style="text-align: center; display: none; margin-top: 20px;"></h2>
+  </div>
+
+  <!-- This links your JS file so the button actually works -->
+  <script src="game.js"></script>
+</body>
+</html>
