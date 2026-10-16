@@ -499,13 +499,46 @@ const guessInput = document.getElementById('guessInput');
 const guessButton = document.getElementById('guessButton');
 const grid = document.getElementById('grid');
 const gameMessage = document.getElementById('gameMessage');
+const autocompleteList = document.getElementById('autocomplete-list');
+const hintButton = document.getElementById('hintButton');
+const giveUpButton = document.getElementById('giveUpButton');
+const hintDisplay = document.getElementById('hintDisplay');
 
-// --- 2. Populate Dropdown ---
-characters.forEach(character => {
-    const option = document.createElement('option');
-    option.value = character.name;
-    dataList.appendChild(option);
+guessInput.addEventListener('input', function() {
+  const val = this.value;
+
+  autocompleteList.innerHTML = '';
+  if (!val) return;
+
+  const matches = characters.filter(c => c.name.toLowerCase().includes(val.toLowerCase()));
+
+  matches.forEach(match => {
+    const item = document.createElement('div');
+    const regex = new RegExp(`(${val})`, "gi");
+    item.innerHTML = match.name.replace(regex, "<strong>$1</strong>");
+
+    item.addEventListener('click', function() {
+      guessInput.value = match.name;
+      autocompleteList.innerHTML = '';
+    });
+
+    autocompleteList.appendChild(item);
+  });
 });
+
+document.addEventListener('click', function(e) {
+  if (e.target !== guessInput) {
+    autocompleteList.innerHTML = '';
+  }
+});
+
+guessInput.addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    guessButton.click()
+  }
+});
+
 
 // --- 3. Daily Target Math (MUST come before save state) ---
 const d = new Date();
@@ -525,7 +558,8 @@ let savedState = JSON.parse(localStorage.getItem('starwarsdle-save'));
 if (!savedState || savedState.date !== today) {
     savedState = {
         date: today,
-        guesses: [] 
+        guesses: [],
+        gaveUp: false
     };
     localStorage.setItem('starwarsdle-save', JSON.stringify(savedState));
 }
@@ -539,10 +573,12 @@ savedState.guesses.forEach(guessName => {
 });
 
 // Check if already won/lost today
-if (savedState.guesses.includes(dailyTarget.name)) {
-    triggerWinState();
+if (savedState.gaveUp) {
+  triggerLossState();
+} else if (savedState.guesses.includes(dailyTarget.name)) {
+  triggerWinState();
 } else if (savedState.guesses.length >= 6) {
-    triggerLossState();
+  triggerLossState();
 }
 
 // --- 5. Helper Functions ---
@@ -632,4 +668,78 @@ guessButton.addEventListener('click', () => {
     } else if (savedState.guesses.length >= 6) {
         setTimeout(triggerLossState, 1500);
     }
+
+    updateGameActions();
 });
+
+function updateGameActions() {
+  const guessesCount = savedState.guesses.length;
+
+  if (savedState.gaveUp || savedState.guesses.includes(dailyTarget.name) || guessesCount >= 6) {
+    giveUpButton.style.display = 'none';
+    hintButton.style.display = 'none';
+    return;
+  }
+
+  if (guessesCount >= 3) {
+    hintButton.style.display = 'inline-block';
+  }
+}
+
+hintButton.addEventListener('click', () => {
+  const guessesCount = savedState.guesses.length;
+
+  // 1. Figure out which attributes are already "green"
+  let knownSpecies = false;
+  let knownWorld = false;
+  let knownAffiliation = false;
+
+  savedState.guesses.forEach(guessName => {
+    const guess = characters.find(c => c.name === guessName);
+    if (guess.species === dailyTarget.species) knownSpecies = true;
+    if (guess.world === dailyTarget.world) knownWorld = true;
+    if (compareArrays(guess.affiliation, dailyTarget.affiliation) === 'green') knownAffiliation = true;
+  });
+
+  // 2. Build a pool of hints using ONLY the unknown attributes
+  const dynamicHints = [];
+  if (!knownSpecies) dynamicHints.push(`Species: ${dailyTarget.species}`);
+  if (!knownWorld) dynamicHints.push(`Homeworld: ${dailyTarget.world}`);
+  if (!knownAffiliation) dynamicHints.push(`Affiliation: ${dailyTarget.affiliation.join(', ')}`);
+
+  // 3. Always include these fallbacks in case they already guessed all 3 attributes above
+  const letterCount = dailyTarget.name.replace(/[^a-zA-Z]/g, '').length;
+  const wordCount = dailyTarget.name.split(' ').length;
+  
+  dynamicHints.push(`The character's name contains exactly ${letterCount} letters`);
+  
+  if (wordCount > 1) {
+      dynamicHints.push(`The character's name consists of ${wordCount} words`);
+  } else {
+      dynamicHints.push(`The character's name is only a single word`);
+  }
+
+  // 4. Pick consistently based on the daily hash
+  const hint1Index = Math.abs(hash) % dynamicHints.length;
+  const hint2Index = (hint1Index + 1) % dynamicHints.length; // +1 ensures they don't get the same hint twice
+
+  // 5. Display the hints
+  if (guessesCount >= 5) {
+    hintDisplay.innerHTML = `Hint 1: ${dynamicHints[hint1Index]}<br>Hint 2: ${dynamicHints[hint2Index]}`;
+  }
+  else if (guessesCount >= 3) {
+    hintDisplay.textContent = `Hint 1: ${dynamicHints[hint1Index]}`;
+  }
+});
+
+giveUpButton.addEventListener('click', () => {
+  if (confirm("Are you sure you want to give up?")) {
+    savedState.gaveUp = true;
+    localStorage.setItem('starwarsdle-save', JSON.stringify(savedState));
+    triggerLossState();
+    updateGameActions();
+    hintDisplay.textContent = "";
+  }
+});
+
+updateGameActions();

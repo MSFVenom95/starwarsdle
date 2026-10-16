@@ -11,13 +11,23 @@
 <body>
 
   <div class="game-wrapper">
-    <!-- Search UI -->
+    <h1 class="game-title">StarWarsdle</h1>
+   <!-- Search UI -->
     <div class="search-container">
-      <input type="text" id="guessInput" list="characterOptions" placeholder="Enter a character...">
-      <datalist id="characterOptions"></datalist>
+      <div class="input-wrapper">
+        <input type="text" id="guessInput" autocomplete="off" placeholder="Guess today's character...">
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+      </div>
       <button id="guessButton">Guess</button>
     </div>
-  
+
+    <!-- Hint and Give Up Actions -->
+    <div class="action-buttons">
+      <button id="hintButton" style="display: none;">Need a Hint?</button>
+      <button id="giveUpButton">Give Up</button>
+    </div>
+    <div id="hintDisplay"></div>
+
     <!-- Grid Headers (Updated to 4 columns to match our new data) -->
     <div class="grid-headers" style="grid-template-columns: repeat(4, 1fr);">
       <div>Name</div>
